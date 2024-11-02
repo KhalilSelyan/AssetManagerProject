@@ -1,0 +1,32 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalEnv": ["NEXT_PUBLIC_API_ROUTE", "DATABASE_URL", "NODE_ENV"],
+  "tasks": {
+    "build": {
+      "env": ["NEXT_PUBLIC_API_ROUTE", "DATABASE_URL", "NODE_ENV"],
+      "dependsOn": ["^build"],
+      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+    },
+    "backend#build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "env": ["NEXT_PUBLIC_API_ROUTE", "DATABASE_URL", "NODE_ENV"],
+      "inputs": [".env"]
+    },
+    "check-types": {
+      "dependsOn": ["^check-types"]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false,
+      "env": ["NEXT_PUBLIC_API_ROUTE", "DATABASE_URL", "NODE_ENV"],
+      "inputs": [".env"]
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

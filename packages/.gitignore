@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Turbo
+.turbo
+
+# Build directories
+dist
+build
+out
+
+# Optional npm cache
+.npm
+node_modules

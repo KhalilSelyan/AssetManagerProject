@@ -1,0 +1,28 @@
+{
+  "name": "assetmanager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "check-types": "tsc --noEmit",
+    "dev": "turbo dev",
+    "clean": "turbo run clean",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "clean:cache": "turbo prune && rm -rf ./node_modules/.cache/turbo",
+    "lint": "turbo run lint"
+  },
+  "packageManager": "npm@10.9.1",
+  "workspaces": [
+    "apps/**",
+    "packages/**"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "turbo": "^2.2.3"
+  }
+}

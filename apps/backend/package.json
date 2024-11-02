@@ -1,0 +1,41 @@
+{
+  "name": "@assetmanager/backend",
+  "version": "1.0.0",
+  "main": "server.mts",
+  "type": "module",
+  "private": "true",
+  "scripts": {
+    "dev": "tsx watch server.mts",
+    "build": "tsc",
+    "start": "node dist/server.mjs",
+    "clean": "rm -rf .turbo node_modules dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@assetmanager/db": "1.0.0",
+    "@fastify/cookie": "^11.0.1",
+    "@fastify/cors": "^10.0.1",
+    "@fastify/csrf-protection": "^7.0.1",
+    "@oslojs/crypto": "^1.0.1",
+    "@oslojs/encoding": "^1.1.0",
+    "@trpc/server": "^10.45.2",
+    "bcrypt": "^5.1.1",
+    "drizzle-orm": "^0.35.3",
+    "drizzle-zod": "^0.5.1",
+    "fastify": "^5.0.0",
+    "nanoid": "^5.0.8",
+    "pg": "^8.13.1",
+    "postgres": "^3.4.5",
+    "superjson": "^2.2.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.8.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
